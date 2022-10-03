@@ -1,5 +1,7 @@
 package ru.netology.data
 
+import Attachment
+
 data class Post (
     val id: Int = -1,
     val ownerId: Int,
@@ -16,5 +18,8 @@ data class Post (
     val postType: String = "post",
     val canPin: Boolean = true,
     val canDelete: Boolean = false,
-    val isPinned: Boolean = true
+    val isPinned: Boolean = true,
+
+    val original: Post? = null,
+    val attachment: Array<Attachment> = emptyArray()
 )
