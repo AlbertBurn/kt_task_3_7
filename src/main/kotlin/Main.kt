@@ -6,6 +6,7 @@ import Photo
 import PhotoAttachment
 import Video
 import VideoAttachment
+import ru.netology.data.Comments
 import ru.netology.data.Post
 import ru.netology.service.WallService
 
@@ -26,6 +27,8 @@ fun main() {
     val post03 = WallService.add(post2).copy(text="Text 3")
 
     WallService.update(post03)
+
+    val commentToPost03 = Comments(fromId = 0, text = "I do not think about horses")
 
     println("Выполнено")
 }
